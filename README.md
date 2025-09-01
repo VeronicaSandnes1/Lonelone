@@ -1,2 +1,3 @@
 # Lonelone
-Første nettside
+loddå
+call me
