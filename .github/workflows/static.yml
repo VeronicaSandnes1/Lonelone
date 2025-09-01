@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lone Lashes ✨ Vippeextensions i hjemmesalong</title>
+  <meta name="description" content="Rosa, glam og glitrende. Vippeextensions i hjemmesalong: klassisk, hybrid, volum, påfyll og fjerning. Bestill på 90020043.">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --pink:#ff46b8;
+      --hot:#ff6ad5;
+      --light:#ffd1ef;
+      --dark:#1a0b16;
+      --ink:#35102b;
+      --card:#ffffffee;
+      --pill:#ffe6f6;
+      --ok:#12b886;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;font-family:Poppins,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:var(--dark);color:var(--ink)}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+
+    /* GLITTER BAKGRUNN */
+    .glitter{
+      position:fixed;inset:0;z-index:-1;
+      background:
+        radial-gradient(1200px 800px at 10% -10%, #ff8ad533, transparent 60%),
+        radial-gradient(1000px 700px at 120% 20%, #ff46b833, transparent 60%),
+        linear-gradient(135deg,#2a0f22,#1a0b16 40%,#2d0f26);
+    }
+    .sparkles, .sparkles::before, .sparkles::after{
+      content:"";
+      position:fixed;inset:0;pointer-events:none;
+      background:
+        radial-gradient(2px 2px at 10% 20%, #fff8 60%, transparent 61%),
+        radial-gradient(2px 2px at 30% 80%, #fff8 60%, transparent 61%),
+        radial-gradient(2.5px 2.5px at 70% 30%, #fff8 60%, transparent 61%),
+        radial-gradient(1.8px 1.8px at 85% 60%, #fff8 60%, transparent 61%),
+        radial-gradient(2px 2px at 55% 55%, #fff8 60%, transparent 61%);
+      animation: twinkle 3s infinite ease-in-out;
+      opacity:.6;
+    }
+    .sparkles::before{animation-duration:4.5s;opacity:.35;filter:blur(.3px)}
+    .sparkles::after{animation-duration:6s;opacity:.25;filter:blur(.7px)}
+    @keyframes twinkle{
+      0%,100%{transform:translateY(0)}
+      50%{transform:translateY(-6px)}
+    }
+
+    /* LAYOUT */
+    .wrap{max-width:1100px;margin:auto;padding:22px}
+    header.nav{
+      position:sticky;top:0;z-index:5;
+      backdrop-filter:blur(8px);
+      background:#1a0b16aa;border-bottom:1px solid #ff6ad522;
+    }
+    .bar{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:10px;color:#fff}
+    .logo{
+      width:18px;height:18px;border-radius:50%;
+      background:conic-gradient(from 0deg, #fff, #ffd6f7, #ff6ad5, #ff46b8, #ffd6f7, #fff);
+      box-shadow:0 0 14px #ff7bd8, 0 0 28px #ff89df77;
+    }
+    nav a{color:#ffe6f6;padding:8px 10px;border-radius:999px}
+    nav a:hover{background:#ff6ad51a}
+
+    /* HERO */
+    .hero{
+      margin-top:20px;
+      display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:center;
+    }
+    .card{
+      background:var(--card);
+      border:1px solid #ffd0ee;
+      border-radius:22px;padding:22px;
+      box-shadow:0 16px 40px #ff6ad52a;
+    }
+    .tag{
+      display:inline-block;font-size:12px;font-weight:600;
+      color:#a00e6b;background:var(--pill);
+      padding:6px 10px;border-radius:999px;border:1px solid #ffb4e5;
+      letter-spacing:.3px
+    }
+    h1{
+      margin:10px 0 6px;font-size:42px;line-height:1.1;
+      background:linear-gradient(135deg,#ffb3e6,#ff6ad5 40%,#ff46b8);
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+      text-shadow:0 0 0 #0000, 0 10px 30px #ff70d24d;
+    }
+    .lead{color:#5d1440;font-weight:600}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
+    .btn{
+      border:0;border-radius:999px;padding:12px 18px;cursor:pointer;
+      font-weight:800
+    }
+    .btn.pink{background:linear-gradient(90deg,#ff6ad5,#ff46b8);color:white;box-shadow:0 10px 20px #ff6ad540}
+    .btn.ghost{background:#fff;color:#a20e6b;border:2px solid #ffb3e6}
+    .eyebrow{
+      display:inline-block;margin-top:10px;
+      font-weight:800;letter-spacing:.5px;color:#a20e6b
+    }
+
+    /* INFO-RUTER */
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:18px}
+    .price-row{display:flex;justify-content:space-between;border-bottom:1px dashed #ffbde9;padding:10px 0}
+    .price{font-weight:800;color:#a20e6b}
+
+    /* BANNER */
+    .marquee{
+      margin:18px 0;background:linear-gradient(90deg,#ffe2f6,#ffd1ef);
+      border:1px solid #ffc3ea;border-radius:18px;color:#8b0a5a;font-weight:800;
+      overflow:hidden;position:relative
+    }
+    .marquee span{
+      display:inline-block;padding:10px 18px;white-space:nowrap;
+      animation: slide 12s linear infinite
+    }
+    @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+    /* KONTAKT */
+    .contact form{display:grid;gap:12px}
+    input,textarea{
+      width:100%;padding:12px 14px;border-radius:14px;
+      border:1px solid #ffbde9;background:#fff;color:#5d1440
+    }
+    .note{font-size:13px;color:#6b1b4a;background:#fff;border:1px dashed #ffbde9;padding:10px;border-radius:12px}
+
+    footer{color:#ffd6f7;text-align:center;padding:30px 0}
+
+    /* MOBIL */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      h1{font-size:36px}
+      .grid-3{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="glitter"></div>
+  <div class="sparkles"></div>
+
+  <header class="nav">
+    <div class="wrap bar">
+      <div class="brand"><span class="logo"></span><strong style="color:#ffe6f6">Lone Lashes</strong></div>
+      <nav>
+        <a href="#priser">Priser</a>
+        <a href="#butikk">Varesalg</a>
+        <a href="#info">Info</a>
+        <a href="#kontakt" class="btn pink">BESTILL</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="card">
+        <span class="tag">Rosa. Glitrende. Uforglemmelig.</span>
+        <h1>Vipper som får folk til å snu seg.</h1>
+        <p class="lead">Klassisk, hybrid og volum i hjemmesalong. Skånsom påføring, hygienisk rutine, null stress. Du legger deg ned, står opp glam.</p>
+        <div class="cta">
+          <a class="btn pink" href="tel:+4790020043">Ring 900 20 043</a>
+          <a class="btn ghost" href="mailto:VeronicaSandnes1@outlook.com">E-post</a>
+        </div>
+        <span class="eyebrow">Sandnes / Stavanger • Gratis fjerning ved nytt sett • Patch-test på forespørsel</span>
+      </div>
+
+      <div class="card" aria-hidden="true">
+        <div class="marquee">
+          <span>SPARKLE UP YOUR LASH GAME ✦ LONE LASHES ✦ ROSA GLAM ✦ VOLUUM, HYBRID, KLASSISK ✦ </span>
+          <span>SPARKLE UP YOUR LASH GAME ✦ LONE LASHES ✦ ROSA GLAM ✦ VOLUUM, HYBRID, KLASSISK ✦ </span>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+          <div class="card" style="background:#fff4fb;border-color:#ffc3ea;text-align:center">
+            <div style="font-size:30px">💖</div>
+            <strong>Myk komfort</strong><br><small>Silkepute, god støtte, null kleb-kliss.</small>
+          </div>
+          <div class="card" style="background:#fff4fb;border-color:#ffc3ea;text-align:center">
+            <div style="font-size:30px">✨</div>
+            <strong>Glitter vibe</strong><br><small>Pen finish uten å bli “stiv spindelvev”.</small>
+          </div>
+          <div class="card" style="background:#fff4fb;border-color:#ffc3ea;text-align:center">
+            <div style="font-size:30px">🫶</div>
+            <strong>Skånsom lim</strong><br><small>Fornuftige lengder, sunn naturlash.</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tjenester -->
+    <section class="grid-3">
+      <div class="card">
+        <h2>Klassisk</h2>
+        <p>Naturlig og ren look. Én extension pr naturvippe.</p>
+      </div>
+      <div class="card">
+        <h2>Hybrid</h2>
+        <p>Litt ekstra fylde. Miks av klassisk og volum.</p>
+      </div>
+      <div class="card">
+        <h2>Volum</h2>
+        <p>Fyldig, myk glam med skreddersydde vifter.</p>
+      </div>
+    </section>
+
+    <!-- Priser -->
+    <section id="priser" class="card">
+      <h2>Priser</h2>
+      <div class="price-row"><span>Nytt sett – Full Extensions</span><span class="price">900 kr</span></div>
+      <div class="price-row"><span>Påfyll 2 uker</span><span class="price">550 kr</span></div>
+      <div class="price-row"><span>Påfyll 3 uker</span><span class="price">650 kr</span></div>
+      <div class="price-row"><span>Vippeløft m/farge</span><span class="price">790 kr</span></div>
+      <div class="price-row"><span>Fjerning</span><span class="price">250 kr</span></div>
+      <p class="note" style="margin-top:10px">Intropriser – kan justeres. Ønsker du styling utenom standard? Spør!</p>
+    </section>
+
+    <!-- Varesalg -->
+    <section id="butikk" class="card">
+      <h2>Varesalg</h2>
+      <div class="grid-3">
+        <div><strong>Renseskum (50 ml)</strong><br><small>Skånsom rens + børste</small><br><b>169 kr</b></div>
+        <div><strong>Spoolies (20 stk)</strong><br><small>Perfekt etterstell</small><br><b>49 kr</b></div>
+        <div><strong>Serum</strong><br><small>Plei naturvippene</small><br><b>249 kr</b></div>
+      </div>
+    </section>
+
+    <!-- Info -->
+    <section id="info" class="grid-2">
+      <div class="card">
+        <h2>Før timen</h2>
+        <ul style="margin:0 0 0 18px">
+          <li>Kom uten øyesminke.</li>
+          <li>Rens vippene samme dag.</li>
+          <li>Gi beskjed ved allergi – patch-test mulig.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Etterstell</h2>
+        <ul style="margin:0 0 0 18px">
+          <li>Unngå vann/damp første 24 t.</li>
+          <li>Rens 3–4 ganger i uka, børst lett daglig.</li>
+          <li>Sov gjerne på rygg eller med silkeputevar.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="kontakt" class="card">
+      <h2>Bestill time</h2>
+      <p><b>Telefon:</b> <a href="tel:+4790020043">900 20 043</a><br>
+         <b>E-post:</b> <a href="mailto:VeronicaSandnes1@outlook.com">VeronicaSandnes1@outlook.com</a></p>
+      <div class="contact">
+        <form onsubmit="event.preventDefault(); alert('Takk! Forespørsel sendt 👍');">
+          <input type="text" placeholder="Navn" required>
+          <input type="email" placeholder="E-post" required>
+          <textarea rows="4" placeholder="Hva ønsker du? (type sett, dato/tid)" required></textarea>
+          <button class="btn pink" type="submit">Send forespørsel</button>
+        </form>
+        <p class="note">Skjemaet er demo uten server. Ring/SMS/E-post svarer raskest.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small>© <span id="y"></span> Lone Lashes • Rosa glam siden dag én ✨</small>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
