@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lone Lashes – Vippeextensions i hjemmesalong (Sandnes/Stavanger)</title>
+  <meta name="description" content="Vippeextensions i hjemmesalong – klassisk, hybrid, volum, påfyll og fjerning. Trygt, rent og pent. Bestill time i dag.">
+  <style>
+    :root{
+      --bg:#0f1220;--card:#151936;--soft:#202652;--text:#f3f5ff;--muted:#b9c0ff;--accent:#6ee7ff;--accent2:#a78bfa;
+      --radius:18px;--shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);
+      font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1100px;margin:auto;padding:24px}
+    .nav{position:sticky;top:0;background:#0f1220cc;backdrop-filter:blur(8px);z-index:10;border-bottom:1px solid #232a64}
+    .nav .bar{display:flex;align-items:center;justify-content:space-between}
+    .logo{font-weight:700}
+    .menu{display:flex;gap:18px;flex-wrap:wrap}
+    .btn{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#0b0e1a;padding:10px 16px;border-radius:999px;font-weight:700;box-shadow:var(--shadow);border:none;cursor:pointer}
+    .hero{padding:56px 0}
+    .card{background:#151936;border:1px solid #282f6b;border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);margin-bottom:20px}
+    h1{font-size:32px;margin:14px 0 8px}
+    .list{list-style:none;padding:0}
+    .list li{display:flex;justify-content:space-between;border-bottom:1px dashed #2e3673;padding:8px 0}
+    input,textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid #323a78;background:#0f1330;color:var(--text)}
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap bar">
+      <div class="logo">Lone Lashes</div>
+      <nav class="menu">
+        <a href="#priser">Priser</a>
+        <a href="#butikk">Varesalg</a>
+        <a href="#info">Info</a>
+        <a href="#kontakt" class="btn">Bestill</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero card">
+      <h1>Vipper som sitter – hygienisk, pent og skånsomt</h1>
+      <p>Klassisk, hybrid og volum. Påfyll, fjerning og vippe­løft. Hjemmesalong i Sandnes med fokus på hygiene og resultat.</p>
+      <a class="btn" href="#kontakt">Bestill time nå</a>
+    </section>
+
+    <section id="priser" class="card">
+      <h2>Priser</h2>
+      <ul class="list">
+        <li><span>Nytt sett – Full Extensions</span><strong>900 kr</strong></li>
+        <li><span>Påfyll 2 uker</span><strong>550 kr</strong></li>
+        <li><span>Påfyll 3 uker</span><strong>650 kr</strong></li>
+        <li><span>Vippeløft m/farge</span><strong>790 kr</strong></li>
+        <li><span>Fjerning</span><strong>250 kr</strong></li>
+      </ul>
+    </section>
+
+    <section id="butikk" class="card">
+      <h2>Varesalg</h2>
+      <ul class="list">
+        <li><span>Renseskum (50 ml)</span><strong>169 kr</strong></li>
+        <li><span>Spoolies (20 stk)</span><strong>49 kr</strong></li>
+        <li><span>Serum</span><strong>249 kr</strong></li>
+      </ul>
+    </section>
+
+    <section id="info" class="card">
+      <h2>Info</h2>
+      <p>Kom uten øyesminke. Påfyll anbefales innen 2–3 uker. Avbestill senest 24t før. Allergi? Be om patch-test.</p>
+    </section>
+
+    <section id="kontakt" class="card">
+      <h2>Bestill time</h2>
+      <p>Telefon: <a href="tel:+4790020043">90020043</a><br>
+      E-post: <a href="mailto:VeronicaSandnes1@outlook.com">VeronicaSandnes1@outlook.com</a></p>
+      <form onsubmit="event.preventDefault();alert('Takk! Jeg svarer så snart jeg kan.');">
+        <input type="text" placeholder="Navn" required>
+        <input type="email" placeholder="E-post" required>
+        <textarea placeholder="Hva ønsker du?" rows="4" required></textarea>
+        <button class="btn" type="submit">Send forespørsel</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <small>© <span id="y"></span> Lone Lashes – hjemmesalong i Sandnes</small>
+  </footer>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
